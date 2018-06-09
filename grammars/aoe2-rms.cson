@@ -1,0 +1,11 @@
+'scopeName': 'source.rms'
+'name': 'Aoe2 RMS'
+'fileTypes': [
+  'rms'
+]
+'patterns': [
+  {
+    'match': '^\\s*@@.*$'
+    'name': 'comment'
+  }
+]
