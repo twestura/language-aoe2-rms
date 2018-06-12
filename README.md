@@ -15,6 +15,10 @@ After installation, opening a file with the extension `.rms` will syntax highlig
 
 Note you can also go to the `Themes` section of the `Settings` tab to choose from different syntax highlighting color schemes.
 
+You may need to run Atom as an administrator in order to have permission to save files inside of your aoe2 folder.
+
+A guide for getting started with RMS scripting can be found here: [http://aok.heavengames.com/cgi-bin/forums/display.cgi?action=ct&f=28,42485,,30](http://aok.heavengames.com/cgi-bin/forums/display.cgi?action=ct&f=28,42485,,30)
+
 ## Snippets
 
 Right now I have support for several snippets and plan on adding more.
