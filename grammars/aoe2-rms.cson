@@ -3,6 +3,8 @@
 'fileTypes': [
   'rms'
 ]
+# TODO check how the fold start/stop feature functions
+# TODO check appropriateness of each name
 'patterns': [
   # comments
   {
@@ -19,7 +21,7 @@
 
   # control flow keywords
   {
-    'match': '\\b(else|elseif|end_random|endif|if|start_random)\\b'
+    'match': '\\b(else|elseif|end_random|endif|if|percent_chance|start_random)\\b'
     'name': 'keyword.control.rms'
   }
 
@@ -33,5 +35,27 @@
   {
     'match': '#(const|define|include_drs)'
     'name': 'keyword.control.directive.rms'
+  }
+
+  # Constants
+  {
+    'match': '\\b[A-Z_0-9]+\\b'
+    'name': 'constant.other.rms'
+  }
+
+  # TODO look for other UP or HD commands/attributes that I may have missed
+
+  # Commands
+  {
+    'match': '\\b(random_placement|grouped_by_team|nomad_resources|ai_info_map_type|create_player_lands|create_land|create_elevation|create_terrain|create_connect_all_lands|create_connect_all_players_land|create_connect_teams_lands|create_connect_same_land_zones|create_object)\\b'
+    'name': 'support.function.rms'
+  }
+
+  # Attributes
+  # base_terrain is both a command and an attribute
+  # cliff generation commands are here
+  {
+    'match': '\\b(terrain_type|land_percent|number_of_tiles|base_size|base_elevation|left_border|right_border|top_border|bottom_border|land_position|border_fuzziness|clumping_factor|zone|set_zone_randomly|set_zone_by_team|other_zone_avoidance_distance|land_id|assign_to_player|base_terrain|number_of_tiles|number_of_clumps|set_scale_by_size|set_scale_by_groups|spacing|min_number_of_cliffs|max_number_of_cliffs|min_length_of_cliff|max_length_of_cliff|cliff_curliness|min_distance_cliffs|min_terrain_distance|spacing_to_other_terrain_types|set_avoid_player_start_areas|height_limits|set_flat_terrain_only|default_terrain_replacement|replace_terrain|terrain_cost|terrain_size|number_of_objects|number_of_groups|group_variance|set_scaling_to_map_size|set_scaling_to_player_number|set_place_for_every_player|set_gaia_object_only|terrain_to_place_on|min_distance_to_players|max_distance_to_players|max_distance_to_other_zones|min_distance_group_placement|temp_min_distance_group_placement|group_placement_radius|set_tight_grouping|set_loose_grouping|place_on_specific_land_id|resource_delta)\\b'
+    'name': 'support.variable.rms'
   }
 ]
