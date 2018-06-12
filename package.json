@@ -1,7 +1,7 @@
 {
   "name": "language-aoe2-rms",
   "version": "0.1.0",
-  "description": "A short description of your language package",
+  "description": "Atom grammar support for Age of Empires II random map scripts.",
   "keywords": [
     "language",
     "grammar"
