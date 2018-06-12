@@ -4,8 +4,34 @@
   'rms'
 ]
 'patterns': [
+  # comments
   {
-    'match': '^\\s*@@.*$'
-    'name': 'comment'
+    'begin': '/\\*'
+    'end': '\\*/'
+    'name': 'comment.block.rms'
+  }
+
+  # section headers
+  {
+    'match': '<(PLAYER_SETUP|LAND_GENERATION|ELEVATION_GENERATION|TERRAIN_GENERATION|CLIFF_GENERATION|CONNECTION_GENERATION|OBJECTS_GENERATION)>'
+    'name': 'entity.name.section.rms'
+  }
+
+  # control flow keywords
+  {
+    'match': '\\b(else|elseif|end_random|endif|if|start_random)\\b'
+    'name': 'keyword.control.rms'
+  }
+
+  # Integers
+  {
+    'match': '\\b([1-9]+[0-9]*|0)'
+    'name': 'constant.numeric.integer.decimal.rms'
+  }
+
+  # Directives
+  {
+    'match': '#(const|define|include_drs)'
+    'name': 'keyword.control.directive.rms'
   }
 ]
