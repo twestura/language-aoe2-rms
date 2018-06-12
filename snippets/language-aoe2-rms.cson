@@ -1,14 +1,21 @@
 '.source.rms':
   'Title':
     'prefix': 'title'
-    'body': '/* ************ ${1:MAP NAME} ************ */'
+    'body': """
+      /* ************ ${1:MAP NAME} ************ */
+      /*
+       * ${2:description}
+       * Author: ${3:author}
+       */
+       $4
+    """
 
   'Sections':
     'prefix': 'sections'
     'body': """
       /* ************************************************************************** */
       <PLAYER_SETUP>
-
+      $1
       /* ************************************************************************** */
       <LAND_GENERATION>
 
@@ -140,3 +147,23 @@
         ${2:attributes}
       }
     """
+
+  'Define':
+    'prefix': 'def'
+    'body': '#define ${1:label}'
+
+  'Constant':
+    'prefix': 'const'
+    'body': '#const ${1:name} ${2:n}'
+
+  'Include DRS':
+    'prefix': 'drs'
+    'body': '#include_drs ${1:name}'
+
+  'AI Info Map Type':
+    'prefix': 'aiinfo'
+    'body': 'ai_info_map_type ${1:MapName} ${2:IsNomad} ${3:IsMichi} ${4:IsStandard}'
+
+  'Random Number':
+    'prefix': 'rnd'
+    'body': 'rnd(${1:min}, ${2:max})$3'

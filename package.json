@@ -6,7 +6,7 @@
     "language",
     "grammar"
   ],
-  "repository": "https://github.com/atom/language-aoe2-rms",
+  "repository": "https://github.com/twestura/language-aoe2-rms",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
