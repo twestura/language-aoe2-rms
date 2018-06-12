@@ -84,3 +84,59 @@
       <OBJECTS_GENERATION>
 
     """
+
+  'Random Block':
+    'prefix': 'sr'
+    'body': """
+      start_random
+        percent_chance ${1:percent}
+          ${2:body}
+      end_random
+    """
+
+  'Percent Chance':
+    'prefix': 'pc'
+    'body': """
+      percent_chance ${1:percent}
+        ${2:body}
+    """
+
+  'Create Land':
+    'prefix': 'cland'
+    'body': """
+      create_land {
+        ${2:attributes}
+      }
+    """
+
+  'Create Player Lands':
+    'prefix': 'cplands'
+    'body': """
+      create_player_lands {
+        ${2:attributes}
+      }
+    """
+
+  'Create Elevation':
+    'prefix': 'cele'
+    'body': """
+      create_elevation ${1:0-7} {
+        ${2:attributes}
+      }
+    """
+
+  'Create Terrain':
+    'prefix': 'cter'
+    'body': """
+      create_terrain ${1:terrain} {
+        ${2:attributes}
+      }
+    """
+
+  'Create Object':
+    'prefix': 'cobj'
+    'body': """
+      create_object ${1:object} {
+        ${2:attributes}
+      }
+    """

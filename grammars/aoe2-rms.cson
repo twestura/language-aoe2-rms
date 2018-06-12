@@ -4,6 +4,7 @@
   'rms'
 ]
 # TODO check how the fold start/stop feature functions
+# TODO curly brace highlighting and folding
 # TODO check appropriateness of each name
 'patterns': [
   # comments
