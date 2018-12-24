@@ -166,4 +166,4 @@
 
   'Random Number':
     'prefix': 'rnd'
-    'body': 'rnd(${1:min}, ${2:max})$3'
+    'body': 'rnd(${1:min},${2:max})$3'
